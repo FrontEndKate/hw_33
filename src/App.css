@@ -1,0 +1,43 @@
+.field{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 95vh;
+  background-color: darkseagreen;
+  border: black 2px solid;
+  margin: 10px auto;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn{
+  margin-top: 20px;
+  width: 50%;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  background-color: lightgrey;
+  border: whitesmoke 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:active{
+  color: white;
+  background-color: darkgrey;
+}
+
+.nameInp{
+  margin-top: 30px;
+  margin-bottom: 150px;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.card{
+  width: 25%;
+  margin-top: 10px;
+}
+.header{
+  color: whitesmoke;
+  margin-top: 100px;
+}
