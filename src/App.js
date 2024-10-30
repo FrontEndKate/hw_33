@@ -7,7 +7,7 @@ const App = () => {
     const localTimezone = new Date().getTimezoneOffset();
     const localOffsetInHours = -localTimezone * 60 ; // get gmtOffset local system in sec
     return (
-        <div>
+        <div className="app-container">
             {sities.map((s) => (
                 <CityTime
                     key={s.city}

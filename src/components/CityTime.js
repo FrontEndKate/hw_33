@@ -27,12 +27,11 @@ const CityTime = ({cityName, offset, localOffset}) => {
                     if(tempTimeZone && data.name !== city){
                         offsetRef.current = tempTimeZone;
                         nameRef.current = data.name;
+                        setInputCityName('');
                         setCity(data.name);
                     }
                 })
-                .catch(e => {
-
-                    alert(e.message)});
+                .catch(e => {alert(e.message)});
         }
     }, [city]);
 
@@ -42,13 +41,15 @@ const CityTime = ({cityName, offset, localOffset}) => {
     }, []);
 
     return (
-        <div>
+        <div className="city-time-container">
             <input type="text"
                    placeholder={'Enter your city'}
+                   className="city-input"
+                   value={inputCityName}
                    onChange={(e) => setInputCityName(e.target.value)}/>
-            <button onClick={() => setCity(inputCityName)}>Get time</button>
-            <h3>{nameRef.current}</h3>
-            <h4>{time}</h4>
+            <button onClick={() => setCity(inputCityName)} className="get-time-button">Get time</button>
+            <h3 className="city-name">{nameRef.current}</h3>
+            <h4 className="city-time">{time}</h4>
 
         </div>
     );
